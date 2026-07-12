@@ -1,0 +1,5 @@
+# Robots.txt for PlushyAi Studio
+User-agent: *
+Allow: /
+
+Sitemap: https://lovely-axolotl-366f68.netlify.app/sitemap.xml

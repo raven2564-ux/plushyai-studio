@@ -1,0 +1,39 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hex-loader {
+  display: flex;
+  gap: 8px;
+}
+
+.hex {
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-accent-primary);
+  border-radius: 4px;
+  animation: bounce 1.2s infinite ease-in-out both;
+  box-shadow: 0 0 10px var(--color-accent-glow);
+}
+
+.hex:nth-child(1) {
+  animation-delay: -0.32s;
+  background-color: var(--color-accent-secondary);
+}
+
+.hex:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { 
+    transform: scale(0);
+    opacity: 0.5;
+  } 
+  40% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
