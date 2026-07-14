@@ -67,7 +67,7 @@ export function LandingPage() {
               <div className="model-wrapper" key={index} style={{ position: 'relative' }}>
                 {item.type === '3d' ? (
                   <model-viewer
-                    src={`${BACKEND_URL}/api/proxy-glb?url=${encodeURIComponent(item.url)}`}
+                    src={item.url}
                     alt="Showcase 3D Object"
                     auto-rotate
                     camera-controls
