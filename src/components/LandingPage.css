@@ -10,11 +10,12 @@
   font-size: 3rem;
   margin-bottom: 20px;
   font-weight: 800;
+  color: var(--color-text-primary);
 }
 
 .landing-subtitle {
   font-size: 1.2rem;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -24,9 +25,10 @@
   position: relative;
   margin: 40px 0;
   padding: 30px 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 158, 196, 0.4);
+  box-shadow: 0 4px 20px rgba(158, 210, 255, 0.2);
 }
 
 .about-badge {
@@ -34,14 +36,14 @@
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, #9d4edd 0%, #4361ee 100%);
+  background: linear-gradient(135deg, var(--color-accent-primary) 0%, var(--color-accent-secondary) 100%);
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
   color: white;
   z-index: 2;
-  box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 158, 196, 0.3);
 }
 
 .about-grid {
@@ -52,8 +54,8 @@
 }
 
 .about-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(158, 210, 255, 0.4);
   border-radius: 14px;
   padding: 20px;
   text-align: center;
@@ -62,8 +64,8 @@
 
 .about-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(158, 210, 255, 0.3);
+  border-color: rgba(255, 158, 196, 0.6);
 }
 
 .about-icon {
@@ -75,12 +77,12 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 10px;
-  color: var(--text-primary);
+  color: var(--color-text-primary);
 }
 
 .about-card p {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
@@ -114,6 +116,13 @@
   color: var(--color-text-secondary);
   font-style: italic;
   font-size: 0.9rem;
+}
+
+/* Enlarge Button Overlay */
+.enlarge-button-overlay .btn-icon {
+  background: linear-gradient(135deg, var(--color-accent-primary) 0%, var(--color-accent-secondary) 100%) !important;
+  color: white;
+  box-shadow: 0 2px 12px rgba(255,158,196,0.3);
 }
 
 .landing-cta {
