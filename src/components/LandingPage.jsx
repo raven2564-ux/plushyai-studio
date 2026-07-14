@@ -33,6 +33,31 @@ export function LandingPage() {
         <p className="landing-subtitle">
           Turn your imagination into reality. Generate highly detailed 3D Objects, stunning Images, Stickers, and cinematic Videos using the power of AI.
         </p>
+
+        {/* About Section */}
+        <div className="about-section">
+          <div className="about-badge">📖 What is PlushyAi?</div>
+          
+          <div className="about-grid">
+            <div className="about-card">
+              <div className="about-icon">🎨</div>
+              <h3>Generate Anything</h3>
+              <p>From cute stickers to professional 3D models, you can create it all with a simple text prompt.</p>
+            </div>
+
+            <div className="about-card">
+              <div className="about-icon">🧠</div>
+              <h3>AI-Powered Magic</h3>
+              <p>Our platform uses the latest AI models to turn your ideas into stunning creations in minutes.</p>
+            </div>
+
+            <div className="about-card">
+              <div className="about-icon">🔐</div>
+              <h3>Your Work is Safe</h3>
+              <p>All your creations are stored securely in your account, and you can access them anytime.</p>
+            </div>
+          </div>
+        </div>
         
         <div className="landing-showcase">
           <div className="showcase-badge">✨ Interactive Showcase</div>
