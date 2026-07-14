@@ -9,18 +9,21 @@ export function LandingPage() {
   const [enlargedModel, setEnlargedModel] = useState(null);
   
   const showcaseItems = [
-    { type: '3d', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2F3d-1780429216535.glb?alt=media&token=9343c443-f915-4605-a238-fadf85809fa1' },
-    { type: '3d', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2F3d-1780456244386.glb?alt=media&token=6fb486f7-6206-4b91-9ae6-b20cf61be499' },
-    { type: '3d', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2F3d-1780454799248.glb?alt=media&token=c5c82384-b619-4623-a968-eb4879201d93' },
-    { type: '3d', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2F3d-1780420422429.glb?alt=media&token=daec59ec-d958-4f2b-ac27-9c256fd7e893' },
-    { type: 'image', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2Fsticker-1780417995028.png?alt=media&token=aff554fa-4057-45e0-a10b-e82e0ebdebd3' },
-    { type: 'image', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2Fsticker-1780419558100.png?alt=media&token=b839c872-fcff-4bd0-9f0b-2f8f6541ef43' },
-    { type: 'image', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2Fimage-1780404199447.png?alt=media&token=c8ccea83-f76b-49a2-bc45-077c6d8db328' },
-    { type: 'image', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2Fimage-1780417753904.png?alt=media&token=bb3ea100-4b7b-4ed2-9c48-6ec8aea9928e' },
-    { type: 'video', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2Fvideo-1780389384989.mp4?alt=media&token=b06e4f4c-2aa1-4a91-b439-75a2db9b06cf' },
-    { type: 'video', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2Fvideo-1780640370917.mp4?alt=media&token=79ec23be-7851-4b0b-a0bd-b42a9e83b934' },
-    { type: 'video', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2Fvideo-1780628085543.mp4?alt=media&token=a31c1de4-d21d-46ca-879a-cc13359706f8' },
-    { type: 'video', url: 'https://firebasestorage.googleapis.com/v0/b/plushyai-720cd.firebasestorage.app/o/users%2F9sw4PSABkEMImaMGNg5eaINv83u1%2Fcreations%2Fvideo-1780389556955.mp4?alt=media&token=2ba4247a-af16-44ad-9b00-f1a13a84171f' }
+    // Use public, permanent URLs for showcase
+    { type: 'image', url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80' },
+    { type: 'image', url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80' },
+    { type: 'image', url: 'https://images.unsplash.com/photo-1550684376-efcbd6e3f031?w=400&q=80' },
+    { type: 'image', url: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80' },
+    // 3D models (from public CDN)
+    { type: '3d', url: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb' },
+    { type: '3d', url: 'https://modelviewer.dev/shared-assets/models/RobotExpressive.glb' },
+    { type: '3d', url: 'https://modelviewer.dev/shared-assets/models/Horse.glb' },
+    { type: '3d', url: 'https://modelviewer.dev/shared-assets/models/Burger.glb' },
+    // Sample videos (placeholder)
+    { type: 'video', url: 'https://www.w3schools.com/html/mov_bbb.mp4' },
+    { type: 'video', url: 'https://www.w3schools.com/html/movie.mp4' },
+    { type: 'image', url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80' },
+    { type: 'image', url: 'https://images.unsplash.com/photo-1488888307935-1a252f41e961?w=400&q=80' }
   ];
 
   return (
