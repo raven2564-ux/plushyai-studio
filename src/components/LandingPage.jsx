@@ -73,7 +73,7 @@ export function LandingPage() {
                     camera-controls
                     shadow-intensity="1"
                     environment-image="neutral"
-                    style={{ width: '100%', height: '300px', backgroundColor: '#0a0a10', borderRadius: '12px', outline: 'none', cursor: 'grab' }}
+                    style={{ width: '100%', height: '300px', backgroundColor: '#f8f0f8', borderRadius: '12px', outline: 'none', cursor: 'grab', border: '1px solid rgba(255, 158, 196, 0.4)' }}
                   ></model-viewer>
                 ) : item.type === 'video' ? (
                   <video 
@@ -82,13 +82,13 @@ export function LandingPage() {
                     loop 
                     muted 
                     playsInline 
-                    style={{ width: '100%', height: '300px', objectFit: 'cover', backgroundColor: '#0a0a10', borderRadius: '12px' }} 
+                    style={{ width: '100%', height: '300px', objectFit: 'cover', backgroundColor: '#f0f4ff', borderRadius: '12px', border: '1px solid rgba(158, 210, 255, 0.4)' }} 
                   />
                 ) : (
                   <img 
                     src={item.url} 
                     alt="Showcase Item" 
-                    style={{ width: '100%', height: '300px', objectFit: 'contain', backgroundColor: '#0a0a10', borderRadius: '12px' }} 
+                    style={{ width: '100%', height: '300px', objectFit: 'contain', backgroundColor: '#fff5f8', borderRadius: '12px', border: '1px solid rgba(255, 158, 196, 0.4)' }} 
                   />
                 )}
                 <div 
@@ -99,7 +99,7 @@ export function LandingPage() {
                     className="btn-icon" 
                     title="Enlarge" 
                     onClick={() => setEnlargedModel({ type: item.type, url: item.url })}
-                    style={{ background: 'rgba(255, 255, 255, 0.2)', backdropFilter: 'blur(5px)', padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer', fontSize: '1.2rem' }}
+                    style={{ background: 'rgba(255, 158, 196, 0.4)', backdropFilter: 'blur(5px)', padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer', fontSize: '1.2rem' }}
                   >
                     🔍
                   </button>
@@ -122,8 +122,8 @@ export function LandingPage() {
 
     {/* Lightbox for enlarged Item */}
     {enlargedModel && (
-      <div className="lightbox-overlay" onClick={() => setEnlargedModel(null)} style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.9)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <button className="lightbox-close" onClick={() => setEnlargedModel(null)} title="Close" style={{ position: 'absolute', top: '20px', right: '30px', background: 'none', border: 'none', color: 'white', fontSize: '40px', cursor: 'pointer' }}>&times;</button>
+      <div className="lightbox-overlay" onClick={() => setEnlargedModel(null)} style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(245, 235, 245, 0.95)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <button className="lightbox-close" onClick={() => setEnlargedModel(null)} title="Close" style={{ position: 'absolute', top: '20px', right: '30px', background: 'none', border: 'none', color: '#3d3d4f', fontSize: '40px', cursor: 'pointer' }}>&times;</button>
         <div className="lightbox-content" onClick={e => e.stopPropagation()} style={{ width: '90%', maxWidth: '800px', height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           {enlargedModel.type === '3d' ? (
             <model-viewer
@@ -133,7 +133,7 @@ export function LandingPage() {
               camera-controls
               shadow-intensity="1"
               environment-image="neutral"
-              style={{ width: '100%', height: '100%', backgroundColor: '#0a0a10', borderRadius: '16px', outline: 'none' }}
+              style={{ width: '100%', height: '100%', backgroundColor: '#f8f0f8', borderRadius: '16px', outline: 'none', border: '1px solid rgba(255, 158, 196, 0.4)' }}
             ></model-viewer>
           ) : enlargedModel.type === 'video' ? (
             <video 
@@ -141,13 +141,13 @@ export function LandingPage() {
               autoPlay 
               loop 
               controls
-              style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '16px', outline: 'none' }} 
+              style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '16px', outline: 'none', border: '1px solid rgba(158, 210, 255, 0.4)' }} 
             />
           ) : (
             <img 
               src={enlargedModel.url} 
               alt="Enlarged Item" 
-              style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} 
+              style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', borderRadius: '16px', border: '1px solid rgba(255, 158, 196, 0.4)' }} 
             />
           )}
         </div>
