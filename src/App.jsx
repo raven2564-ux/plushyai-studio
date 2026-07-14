@@ -392,16 +392,6 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Animated Cyberpunk Background */}
-      <div className="video-background">
-        <img 
-          src="/bg-image.jpg" 
-          alt="Background"
-          className="bg-video-element"
-        />
-        <div className="video-overlay"></div>
-      </div>
-
       <Header currentView={view} onViewChange={setView} />
       <main className="main-content container">
         {!currentUser ? (
